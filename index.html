@@ -1,73 +1,163 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Четвертая лаба</title>
-        <link rel="stylesheet" href="table.css" \>
-    </head>
 
-    <body>
-        <div class="header">
-            <a style="margin-right: 10px; color: red" href="lab2.html">Основная страница</a>
-            <a style="margin-right: 10px; color: red" href="lab3.html">Позиционирование элементов</a>
-            <a style="margin-right: 10px; color: red" href="table.html">Таблица</a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Милош Бикович</title>
+</head>
+
+<body data-spy="scroll" data-bs-target="#myScrollspy" data-offset="20">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://ru.wikipedia.org/wiki/%D0%91%D0%B8%D0%BA%D0%BE%D0%B2%D0%B8%D1%87,_%D0%9C%D0%B8%D0%BB%D0%BE%D1%88">Милош Бикович</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="info.html">Основная информация</a></li>
+                    <li class="nav-item"><a class="nav-link" href="films.html">Список фильмов</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-2">
+            <nav id="navbar-side" class="h-100 flex-column align-items-stretch pe-4 border-end bg-dark"
+                style="position: fixed; left: 0; height: 100%;">
+                <nav class="nav nav-pills flex-column ">
+                    <li class="nav-item"><a class="nav-link" href="#actorCarousel">Фотографии</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cards">Список фильмов</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#accordionExample">Краткая биография</a>
+                    </li>
+                </nav>
+            </nav>
         </div>
 
-        <div style="margin-top: 10px">
-        <table>
-            <caption>Таблица 1</caption>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>ФИО</th>
-                    <th>Пол</th>
-                    <th>Возраст</th>
-                    <th>Направление</th>
-                </tr>
-            </thead>
+        <div class="col-9">
+            <div data-bs-spy="scroll" data-bs-target="#navbar-side" data-bs-smooth-scroll="true" class="scrollspy"
+                tabindex="0">
+                <div id="actorCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#actorCarousel" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#actorCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#actorCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#actorCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#actorCarousel" data-bs-slide-to="4"></button>
+                    </div>
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Иванов Иван Иванович</td>
-                    <td>Мужской</td>
-                    <td>18</td>
-                    <td>ИБАС</td>
-                </tr>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img style="width: 850px; height: 850px" src="images/Milosh1.jpg" class="d-block w-100" alt="Милош Бикович">
+                        </div>
+                        <div class="carousel-item">
+                            <img style="width: 850px; height: 850px" src="images/Milosh2.jpg" class="d-block w-100" alt="Милош Бикович">
+                        </div>
+                        <div class="carousel-item">
+                            <img style="width: 850px; height: 850px" src="images/Milosh3.jpg" class="d-block w-100" alt="Милош Бикович">
+                        </div>
+                        <div class="carousel-item">
+                            <img style="width: 850px; height: 850px" src="images/Milosh4.jpg" class="d-block w-100" alt="Милош Бикович">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#actorCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Предыдущий</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#actorCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Следующий</span>
+                    </button>
+                </div>
 
-                <tr>
-                    <td>2</td>
-                    <td>Степанов Степан Степанович</td>
-                    <td>Мужской</td>
-                    <td>20</td>
-                    <td>ПМФ</td>
-                </tr>
 
-                <tr>
-                    <td>3</td>
-                    <td>Александрова Александра Александровна</td>
-                    <td>Женский</td>
-                    <td>19</td>
-                    <td>ПМИ</td>
-                </tr>
+                <div id="cards" class="container mt-3">
+                    <h2>Фильмы</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="images/Holop.jpg" class="card-img-top" alt="Холоп">
+                                <div class="card-body">
+                                    <h5 class="card-title">Холоп</h5>
+                                    <p class="card-text">27-летний московский мажор Григорий ошалел от безнаказанности. Богатый папа стабильно его отмазывает, да так, что уже обновил автопарк и оборудование отделению полиции, где служит начальником его друг. После очередной выходки терпение отца иссякает, и он обращается к психологу, практикующему шоковые методы воздействия на пациентов. Вскоре сынуля попадает в аварию и приходит в себя на деревенской конюшне. На дворе — Россия 1860 года, а сам он — бесправный конюх Гришка, которому за любую провинность и ослушание всегда готовы всыпать плетей, а то и вздёрнуть на глазах у всего честного народа.
+                                    </p>
+                                    <a href="https://www.kinopoisk.ru/film/1183582/?ysclid=m3tvar43ks12466234" target="_blank"
+                                        class="btn btn-primary">Смотреть на Кинопоиске</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="images/Eleon.jpg" class="card-img-top" alt="Отель Элеон">
+                                <div class="card-body">
+                                    <h5 class="card-title">Отель Элеон</h5>
+                                    <p class="card-text">Шеф-повар Виктор Баринов ушел на пенсию, а Элеонора Андреевна встретила мужчину своей мечты. Но жизнь продолжается: Михаил Джекович по-прежнему отвечает за порядок в «Элеоне», шеф-поваром ресторана Victor назначили Сеню, а Настя получает неожиданное повышение, что совсем не радует Костю. Все идет своим чередом, пока отель не возглавляет Павел – непутевый племянник прежней хозяйки. Чтобы выполнить нешуточное условие тети, он переманивает из Брюсселя суперменеджера Софию Толстую. Новая управляющая устанавливает свои правила, и теперь отель ждут серьезные перемены, которые переворачивают с ног на голову не только привычный уклад «Элеона», но и личные планы героев</p>
+                                    <a href="https://www.kinopoisk.ru/series/988784/" target="_blank"
+                                        class="btn btn-primary">Смотреть на Кинопоиске</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="images/Ice.jpg" class="card-img-top" alt="Лёд">
+                                <div class="card-body">
+                                    <h5 class="card-title">Лёд</h5>
+                                    <p class="card-text">С самого детства Надя верила в чудеса. Она представляла себе, как выходит на лёд под овации публики и танцует свой самый красивый танец. И вот, благодаря вере и упорству, Надя становится знаменитой фигуристкой. Но когда ее мечты о громких победах, красивой жизни и прекрасном принце уже, кажется, готовы исполниться, судьба преподносит ей настоящее испытание.
+                                    </p>
+                                    <a href="https://www.kinopoisk.ru/film/900052/" target="_blank"
+                                        class="btn btn-primary">Смотреть на Кинопоиске</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <tr>
-                    <td>4</td>
-                    <td>Евгеньева Евгения Евгеньевна</td>
-                    <td>Женский</td>
-                    <td>21</td>
-                    <td>ИБАС</td>
-                </tr>
 
-                <tr>
-                    <td>5</td>
-                    <td>Анатольев Анатолий Анатольевич</td>
-                    <td>Мужской</td>
-                    <td>17</td>
-                    <td>ПМИ</td>
-                </tr>
-            </tbody>
-        </table>
+                <h2>Краткая биография</h2>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Информация об актёре
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Милош Бикович — сербский и российский актёр театра и кино. Родился 13 января 1988 года в Белграде.
+
+В школьные годы занимался в театральном кружке и вёл детскую телепередачу. В 16 лет получил одну из главных ролей в сербском сериале «Доллары идут».
+
+Окончил Белградский университет искусств, играл в Белградском Национальном театре. Снимался в сербских сериалах «Аисты вернутся», «Белая ладья».
+
+В 2014 году исполнил роль Николая Александровича Гульбе-Левицкого в картине Никиты Михалкова «Солнечный удар». После этого начал активно сниматься в российском кино.
+
+Среди его работ — фильмы «Духless 2», «Без границ», «Мифы», «Южный ветер», «Балканский рубеж», «Холоп», «Кома», сериал «Крылья империи».
+
+В 2016 году Бикович начал исполнять роль Паши в спин-оффе «Кухни», сериале «Отель Элеон», затем — в сериале «Гранд». В 2020 году вернулся к этому образу в полнометражной комедии «Отель „Белград“».
+
+В 2020 году состоялась премьера биографического сериала «Магомаев», где Бикович сыграл легендарного певца. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-    </body>
+    </div>
+
+
+
+</body>
+
 </html>
